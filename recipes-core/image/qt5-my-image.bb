@@ -1,12 +1,12 @@
 # Pulled from a mix of different images:
-include recipes-core/images/rpi-basic-image.bb
+include recipes-core/images/core-image-base.bb
 
-inherit core-image-base
+inherit core-image
 
 SUMMARY = "The minimal image that can run Qt5 applications"
 LICENSE = "MIT"
 
-MY_TOOLS = " \
+TOOLS = " \
     qtbase \
     qtbase-dev \
     qtbase-mkspecs \
@@ -14,7 +14,7 @@ MY_TOOLS = " \
     qtbase-tools \
 "
 
-MY_PKGS = " \
+PKGS = " \
     qt3d \
     qt3d-dev \
     qt3d-mkspecs \
@@ -31,9 +31,12 @@ MY_PKGS = " \
     qtdeclarative-mkspecs \
     qtgraphicaleffects \
     qtgraphicaleffects-dev \
+    qtwebengine-dev \
+    qtwebengine-mkspecs \
+    qtwebengine \
 "
 
-MY_FEATURES = " \
+FEATURES = " \
     i2c-tools \
     python-smbus \
     bridge-utils \
@@ -42,9 +45,21 @@ MY_FEATURES = " \
     iptables \
 "
 
+FONTS = " \
+    fontconfig \
+    fontconfig-utils \
+    ttf-dejavu-sans \
+    ttf-dejavu-sans-mono \
+"
+
 IMAGE_INSTALL_append = " \
-    ${MY_TOOLS} \
-    ${MY_PKGS} \
-    ${MY_FEATURES} \
+    ${TOOLS} \
+    ${PKGS} \
+    ${FEATURES} \
+    ${FONTS} \
     basicquick \
 "
+
+PACKAGECONFIG_FONTS_append_pn-qtbase = "fontconfig"
+
+

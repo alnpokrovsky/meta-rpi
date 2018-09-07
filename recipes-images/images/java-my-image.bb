@@ -1,7 +1,7 @@
 # Pulled from a mix of different images:
 include recipes-core/images/core-image-base.bb
 
-inherit core-image
+inherit openjre-test-image
 
 SUMMARY = "The minimal image that can run java applications"
 LICENSE = "MIT"

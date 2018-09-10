@@ -9,7 +9,7 @@ DEPENDS += "qtbase qtdeclarative qtquickcontrols2"
 SRCREV = "${AUTOREV}"
 SRC_URI = "file://*"
 
-S = "${WORKDIR}/git"
+S = "${WORKDIR}"
 
 require recipes-qt/qt5/qt5.inc
 

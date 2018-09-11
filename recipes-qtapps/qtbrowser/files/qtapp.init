@@ -1,0 +1,23 @@
+#! /bin/sh
+# /etc/init.d/qtapp-init
+#
+
+DAEMON=qtWebBrowser
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+start)
+   echo "Starting $DAEMON "
+   exec $DAEMON -s &
+      ;;
+stop)
+   echo "Stopping $DAEMON"
+   start-stop-daemon --stop --name $DAEMON --quiet
+   ;;
+(*))
+   echo "Usage: /etc/init.d/qtapp-init {start|stop}"
+   exit 1
+   ;;
+esac
+exit 0
+

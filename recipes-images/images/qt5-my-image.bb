@@ -58,6 +58,7 @@ IMAGE_INSTALL_append = " \
     ${FEATURES} \
     ${FONTS} \
     basicquick \
+    qtbrowser \
 "
 
 PACKAGECONFIG_FONTS_append_pn-qtbase = "fontconfig"

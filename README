@@ -4,5 +4,16 @@ git clone git://git.yoctoproject.org/poky
 cd poky
 
 git clone git://code.qt.io/yocto/meta-qt5.git
-
 git clone git://git.yoctoproject.org/meta-raspberrypi
+git clone git://git.openembedded.org/meta-openembedded
+
+sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+     build-essential chrpath socat libsdl1.2-dev xterm
+
+sudo apt-get install bison build-essential gperf flex ruby python libasound2-dev libbz2-dev libcap-dev \
+libcups2-dev libdrm-dev libegl1-mesa-dev libgcrypt11-dev libnss3-dev libpci-dev libpulse-dev libudev-dev \
+libxtst-dev gyp ninja-build
+
+sudo apt-get install libssl-dev libxcursor-dev libxcomposite-dev libxdamage-dev libxrandr-dev \
+libfontconfig1-dev libxss-dev libsrtp0-dev libwebp-dev libjsoncpp-dev libopus-dev libminizip-dev \
+libavutil-dev libavformat-dev libavcodec-dev libevent-dev

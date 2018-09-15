@@ -15,12 +15,6 @@ TOOLS = " \
 "
 
 PKGS = " \
-    qt3d \
-    qt3d-dev \
-    qt3d-mkspecs \
-    qtcharts \
-    qtcharts-dev \
-    qtcharts-mkspecs \
     qtconnectivity-dev \
     qtconnectivity-mkspecs \
     qtquickcontrols2 \
@@ -29,16 +23,12 @@ PKGS = " \
     qtdeclarative \
     qtdeclarative-dev \
     qtdeclarative-mkspecs \
-    qtgraphicaleffects \
-    qtgraphicaleffects-dev \
+    qtwebengine \
     qtwebengine-dev \
     qtwebengine-mkspecs \
-    qtwebengine \
 "
 
 FEATURES = " \
-    i2c-tools \
-    python-smbus \
     bridge-utils \
     hostapd \
     dhcp-server \

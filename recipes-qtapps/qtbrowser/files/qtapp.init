@@ -8,7 +8,8 @@ DAEMON=qtWebBrowser
 case "$1" in
    start)
       echo "Starting $DAEMON "
-      exec $DAEMON -nomouse -platform eglfs &
+      export XDG_RUNTIME_DIR=/tmp/runtime-root
+      exec $DAEMON -nomouse -platform linuxfb &
    ;;
    stop)
       echo "Stopping $DAEMON"

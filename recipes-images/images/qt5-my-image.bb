@@ -15,6 +15,7 @@ TOOLS = " \
 "
 
 PKGS = " \
+    qtconnectivity \
     qtconnectivity-dev \
     qtconnectivity-mkspecs \
     qtquickcontrols2 \
@@ -33,6 +34,7 @@ FEATURES = " \
     hostapd \
     dhcp-server \
     iptables \
+    cinematicexperience \
 "
 
 FONTS = " \
@@ -52,5 +54,4 @@ IMAGE_INSTALL_append = " \
 "
 
 PACKAGECONFIG_FONTS_append_pn-qtbase = "fontconfig"
-
 
